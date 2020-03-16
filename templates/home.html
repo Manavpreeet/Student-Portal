@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for list in list %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ list.author }}</a>
+              <small class="text-muted">{{ list.date_listted }}</small>
+            </div>
+            <h2><a class="article-title" href="login">{{ list.title }}</a></h2>
+            <p class="article-content">{{ list.content }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
